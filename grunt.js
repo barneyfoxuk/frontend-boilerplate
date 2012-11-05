@@ -39,8 +39,8 @@ module.exports = function(grunt) {
             },
             app: {
                 src: [
-                    'js/app/SkeletonApp.js',
-                    'js/app/SkeletonApp.ExampleModule.js'
+                    'js/app/App.js',
+                    'js/app/App.ExampleModule.js'
                 ],
                 dest: 'js/app.js'
             }
