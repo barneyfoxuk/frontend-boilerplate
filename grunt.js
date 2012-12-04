@@ -26,6 +26,7 @@ module.exports = function(grunt) {
             },
             polyfills: {
                 src: [
+                    'components/polyfills/console.log.js'
                     //'components/polyfills/ie7.Array.indexOf.js',
                     //'components/polyfills/jquery.cssHooks.backgroundPosition.js'
                 ],
