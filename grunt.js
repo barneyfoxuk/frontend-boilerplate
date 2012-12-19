@@ -95,7 +95,7 @@ module.exports = function(grunt) {
 
         watch: {
             js: {
-                files: ['grunt.js', 'js/**/*.js'],
+                files: ['grunt.js', 'js/app/**/*js', 'components/**/*js'],
                 tasks: 'concat lint'
             },
             compass: {
