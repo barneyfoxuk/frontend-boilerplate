@@ -1,9 +1,0 @@
-{
-  "name": "lib/_legacy/jquery-1.7.8",
-  "main": "index.js",
-  "version": "1.7.8",
-  "repository": {
-    "type": "asset",
-    "url": "http://code.jquery.com/jquery-1.7.8.js"
-  }
-}
