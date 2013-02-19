@@ -85,13 +85,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // sass: {
-        //     dev: {
-        //         files: {
-        //             'css/style.css': 'css/sass/style.scss'
-        //         }
-        //     }
-        // },
 
         watch: {
             js: {
@@ -102,14 +95,6 @@ module.exports = function(grunt) {
                 files: ['css/**/*.scss'],
                 tasks: ['compass:dev']
             }
-            /*
-
-            ,
-            css: {
-                files: ['css/scss/*.scss'],
-                tasks: 'scss'
-            }
-            */
         }
 
     });
@@ -121,7 +106,6 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy', 'concat lint min compass:dist');
 
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-compass');
 
 };

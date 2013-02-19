@@ -1,11 +1,9 @@
 {
-  "name": "republic_jukebox",
+  "name": "karma_boilerplate",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "grunt" : "~0.3.17",
-    "grunt-compass": "~0.3.7",
-    "grunt-contrib-sass": "~0.1.3",
-    "grunt-contrib-compass": "~0.1.0"
+    "grunt-compass": "~0.3.7"
   }
 }
