@@ -3,28 +3,18 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        meta: {
-            version: '0.1.0',
-            banner: '/*! PROJECT_NAME - v<%= meta.version %> - ' +
-                '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-                '* http://PROJECT_WEBSITE/\n' +
-                '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-                'YOUR_NAME; Licensed MIT */'
-        },
-
-        lint: {
-            files: ['grunt.js', 'js/app.js', 'js/app/*.js']
-        },
 
         /* Below here is where you edit: */
         concat: {
             lib: {
+                //array of paths to library js files you are using
                 src: [
                     'components/lib/jquery/jquery-1.8.2.js'
                 ],
                 dest: 'js/lib.js'
             },
             polyfills: {
+                //array of paths to polyfill js files you are using
                 src: [
                     'components/polyfills/console.log.js'
                     //'components/polyfills/ie7.Array.indexOf.js',
@@ -33,6 +23,7 @@ module.exports = function(grunt) {
                 dest: 'js/polyfills.js'
             },
             ext: {
+                //array of paths to extension (i.e. plugins) js files you are using
                 src: [
 
                 ],
@@ -45,9 +36,16 @@ module.exports = function(grunt) {
                 dest: 'js/app.js'
             }
         },
-        /* don't edit below here */
 
-        min: {
+
+        /* you shouldn't need to edit below here */
+
+        jshint: {
+            all: ['Gruntfile.js', 'js/app/*.js']
+        },
+
+
+        uglify: {
             lib: {
                 src: ['js/lib.js'],
                 dest: 'js/lib.min.js'
@@ -68,28 +66,24 @@ module.exports = function(grunt) {
 
         compass: {
             dev: {
-                src: 'css/scss',
-                dest: 'css',
-                outputstyle: 'expanded',
-                linecomments: true,
-                forcecompile: true,
-                relativeassets: true
+                options: {
+                    sassDir: 'css/scss',
+                    cssDir: 'css'
+                }
             },
             dist: {
-                src: 'css/scss',
-                dest: 'css',
-                outputstyle: 'compressed',
-                linecomments: false,
-                forcecompile: true,
-                relativeassets: true
+                options: {
+                    sassDir: 'css/scss',
+                    cssDir: 'css',
+                    environment: 'production'
+                }
             }
         },
-
 
         watch: {
             js: {
                 files: ['grunt.js', 'js/app/**/*js', 'components/**/*js'],
-                tasks: 'concat lint'
+                tasks: ['jshint', 'concat']
             },
             compass: {
                 files: ['css/**/*.scss'],
@@ -100,12 +94,16 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', 'concat lint compass:dev');
+    grunt.registerTask('default', ['jshint', 'concat', 'compass:dev']);
+    grunt.registerTask('dist', ['jshint', 'concat', 'compass:dev', 'uglify']);
 
     // Build distribution version
-    grunt.registerTask('deploy', 'concat lint min compass:dist');
+    //grunt.registerTask('deploy', 'concat lint min compass:dist');
 
-
-    grunt.loadNpmTasks('grunt-compass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
 };

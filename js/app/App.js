@@ -11,7 +11,7 @@ App.init = function() {
     var router = {
     all:        [
                     //module methods to run everytime
-                    CrackerApp.Misc
+                    App.Misc
                 ],
     index:      [
                     //module methods to run on page "index"
@@ -21,7 +21,7 @@ App.init = function() {
 
     /* you shouldn't need to edit the code bolow */
 
-    var currentPage = $('.main').attr('data-page');
+    var currentPage = $('body').attr('data-page');
 
     var modules = router.all;
 
