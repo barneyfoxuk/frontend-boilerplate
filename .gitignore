@@ -9,4 +9,5 @@ nbproject
 .project
 .settings
 *.pyc
-
+*.zip
+*.psd
