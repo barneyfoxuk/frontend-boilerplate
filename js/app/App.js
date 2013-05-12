@@ -9,11 +9,11 @@ App.settings = {
 App.init = function() {
 
     var router = {
-        all:        [
+        all: [
             //module methods to run everytime
             App.Misc
         ],
-        index:      [
+        index: [
             //module methods to run on page "index"
         ]
     };
@@ -28,8 +28,8 @@ App.init = function() {
     if(router[currentPage])
         modules = modules.concat(router[currentPage]);
 
-    $.each(modules, function(i,n) {
-        n.init.call();
+    $.each(modules, function(index, module) {
+        module.init.call();
     });
 
 
