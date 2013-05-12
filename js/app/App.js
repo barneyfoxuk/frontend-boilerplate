@@ -9,13 +9,13 @@ App.settings = {
 App.init = function() {
 
     var router = {
-    all:        [
-                    //module methods to run everytime
-                    App.Misc
-                ],
-    index:      [
-                    //module methods to run on page "index"
-                ]
+        all:        [
+            //module methods to run everytime
+            App.Misc
+        ],
+        index:      [
+            //module methods to run on page "index"
+        ]
     };
 
 
