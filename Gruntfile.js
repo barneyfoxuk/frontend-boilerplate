@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             lib: {
                 //array of paths to library js files you are using
                 src: [
-                    'components/lib/jquery/jquery-1.8.2.js'
+                    'components/lib/jquery/jquery-1.9.1.js'
                 ],
                 dest: 'js/lib.js'
             },
