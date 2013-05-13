@@ -16,8 +16,8 @@ module.exports = function(grunt) {
             polyfills: {
                 //array of paths to polyfill js files you are using
                 src: [
-                    'components/polyfills/console.log.js'
-                    //'components/polyfills/ie7.Array.indexOf.js',
+                    'components/polyfills/console.log.js',
+                    'components/polyfills/es5-shim.js'
                     //'components/polyfills/jquery.cssHooks.backgroundPosition.js'
                 ],
                 dest: 'js/polyfills.js'
