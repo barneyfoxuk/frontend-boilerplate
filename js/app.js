@@ -51,7 +51,7 @@ App.init = function() {
         modules = modules.concat(router[currentPage]);
 
     $.each(modules, function(i,n) {
-        n.call();
+        n.init.call();
     });
 
 
