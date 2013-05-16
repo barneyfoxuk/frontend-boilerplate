@@ -157,31 +157,52 @@ module.exports = function(grunt) {
                     'components/ext/*.js',
                     'components/ext/**/*.js'
                 ],
-                tasks: ['uglify:ext', 'copy:ext', 'clean:ext']
+                tasks: [
+                    'uglify:ext',
+                    'copy:ext',
+                    'clean:ext'
+                ]
             },
             jsComponentsLib: {
                 files: [
                     'components/lib/*.js',
                     'components/lib/**/*.js'
                 ],
-                tasks: ['uglify:lib', 'copy:lib', 'clean:lib']
+                tasks: [
+                    'uglify:lib',
+                    'copy:lib',
+                    'clean:lib'
+                ]
             },
             jsComponentsPolyfills: {
                 files: [
                     'components/polyfills/*.js',
                     'components/polyfills/**/*.js'
                 ],
-                tasks: ['uglify:polyfills', 'copy:polyfills', 'clean:polyfills']
+                tasks: [
+                    'uglify:polyfills',
+                    'copy:polyfills',
+                    'clean:polyfills'
+                ]
             },
             jsApp: {
                 files: [
                     'js/app/**/*.js'
                 ],
-                tasks: ['jshint', 'uglify:app', 'copy:app', 'clean:app']
+                tasks: [
+                    'jshint',
+                    'uglify:app',
+                    'copy:app',
+                    'clean:app'
+                ]
             },
             compass: {
                 files: ['css/**/*.scss'],
-                tasks: ['compass:dev']
+                tasks: ['compass:dev'],
+                options: {
+                    nospawn: true,
+                    livereload: true
+                }
             }
         }
     });
