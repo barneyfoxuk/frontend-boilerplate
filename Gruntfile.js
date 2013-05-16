@@ -55,6 +55,21 @@ module.exports = function(grunt) {
             }
         },
 
+
+        imagemin: {
+            all: {
+                options: {
+                    optimizationLevel: 7,
+                    progressive: true
+                },
+                files: {
+                    // 'img/output.png': 'img/input.png',
+                    // 'img/output.jpeg': 'img/input.jpeg'
+                }
+            }
+        },
+
+
         /* you shouldn't need to edit below here */
         copy: {
             app: {
@@ -152,6 +167,16 @@ module.exports = function(grunt) {
 
 
         watch: {
+            image: {
+                files: [
+                    'img/*.png',
+                    'img/*.jpg',
+                    'img/*.jpeg'
+                ],
+                tasks: [
+                    'imagemin:all'
+                ]
+            },
             jsComponentsExt: {
                 files: [
                     'components/ext/*.js',
@@ -213,10 +238,13 @@ module.exports = function(grunt) {
         'uglify',
         'copy',
         'clean',
-        'compass:dev'
+        'imagemin:all',
+        'compass:dist'
     ]);
 
+
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-compass');
