@@ -61,26 +61,38 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: false,
+                        src: ['app.map'],
+                        dest: 'js/app.map',
+                        filter: 'isFile'
+                    }
+                ]
+            },
+            lib: {
+                files: [
+                    {
+                        expand: false,
                         src: ['lib.map'],
                         dest: 'js/lib.map',
                         filter: 'isFile'
-                    },
-                    {
-                        expand: false,
-                        src: ['polyfills.map'],
-                        dest: 'js/polyfills.map',
-                        filter: 'isFile'
-                    },
+                    }
+                ]
+            },
+            ext: {
+                files: [
                     {
                         expand: false,
                         src: ['ext.map'],
                         dest: 'js/ext.map',
                         filter: 'isFile'
-                    },
+                    }
+                ]
+            },
+            polyfills: {
+                files: [
                     {
                         expand: false,
-                        src: ['app.map'],
-                        dest: 'js/app.map',
+                        src: ['polyfills.map'],
+                        dest: 'js/polyfills.map',
                         filter: 'isFile'
                     }
                 ]
@@ -89,9 +101,26 @@ module.exports = function(grunt) {
 
 
         clean: {
-            src: [
-                '*.map'
-            ]
+            app: {
+                src: [
+                    'app.map'
+                ]
+            },
+            lib: {
+                src: [
+                    'lib.map'
+                ]
+            },
+            ext: {
+                src: [
+                    'ext.map'
+                ]
+            },
+            polyfills: {
+                src: [
+                    'polyfills.map'
+                ]
+            }
         },
 
 
@@ -128,27 +157,27 @@ module.exports = function(grunt) {
                     'components/ext/*.js',
                     'components/ext/**/*.js'
                 ],
-                tasks: ['uglify:ext']
+                tasks: ['uglify:ext', 'copy:ext', 'clean:ext']
             },
             jsComponentsLib: {
                 files: [
                     'components/lib/*.js',
                     'components/lib/**/*.js'
                 ],
-                tasks: ['uglify:lib']
+                tasks: ['uglify:lib', 'copy:lib', 'clean:lib']
             },
             jsComponentsPolyfills: {
                 files: [
                     'components/polyfills/*.js',
                     'components/polyfills/**/*.js'
                 ],
-                tasks: ['uglify:polyfills']
+                tasks: ['uglify:polyfills', 'copy:polyfills', 'clean:polyfills']
             },
             jsApp: {
                 files: [
                     'js/app/**/*.js'
                 ],
-                tasks: ['jshint', 'uglify:app']
+                tasks: ['jshint', 'uglify:app', 'copy:app', 'clean:app']
             },
             compass: {
                 files: ['css/**/*.scss'],
