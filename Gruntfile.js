@@ -70,6 +70,17 @@ module.exports = function(grunt) {
         },
 
 
+        concat: {
+            cssLib: {
+                src: [
+                    'components/lib/normalize/normalize.css',
+                    'components/lib/h5bp/main.css'
+                ],
+                dest: 'css/lib.css'
+            }
+        },
+
+
         /* you shouldn't need to edit below here */
         copy: {
             app: {
@@ -177,6 +188,7 @@ module.exports = function(grunt) {
                     'imagemin:all'
                 ]
             },
+
             jsComponentsExt: {
                 files: [
                     'components/ext/*.js',
@@ -221,7 +233,23 @@ module.exports = function(grunt) {
                     'clean:app'
                 ]
             },
-            compass: {
+
+            cssLib: {
+                files: [
+                    'components/lib/*.css',
+                    'components/lib/**/*.css',
+                    'components/lib/**/**/*.css',
+
+                    'components/ext/*.css',
+                    'components/ext/**/*.css',
+                    'components/ext/**/**/*.css'
+                ],
+                tasks: ['concat:cssLib'],
+                options: {
+                    livereload: true
+                }
+            },
+            cssApp: {
                 files: ['css/**/*.scss'],
                 tasks: ['compass:dev'],
                 options: {
@@ -238,12 +266,14 @@ module.exports = function(grunt) {
         'uglify',
         'copy',
         'clean',
+        'concat',
         'imagemin:all',
         'compass:dist'
     ]);
 
 
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
