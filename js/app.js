@@ -1,2 +1,2 @@
 var App=App||{};App.Misc=function(){var e=function(){},t=function(){};return{init:t,publicMethod:e}}();var App=App||{};App.settings={aSetting:!0},App.init=function(){var e={all:[App.Misc],index:[]},t=$("body").attr("data-page"),n=e.all;e[t]&&(n=n.concat(e[t])),$.each(n,function(e,t){t.init.call()})},$(function(){App.init()});
-//@ sourceMappingURL=js/app-source-map.js
+//@ sourceMappingURL=app.map

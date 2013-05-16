@@ -18,7 +18,6 @@ App.init = function() {
         ]
     };
 
-
     /* you shouldn't need to edit the code bolow */
 
     var currentPage = $('body').attr('data-page');

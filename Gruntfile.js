@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         uglify: {
             lib: {
                 options: {
-                    sourceMap: 'js/lib-source-map.js',
+                    sourceMap: 'lib.map',
                     sourceMapRoot: '/'
                 },
                 //array of paths to library js files you are using
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
             polyfills: {
                 options: {
-                    sourceMap: 'js/polyfills-source-map.js',
+                    sourceMap: 'polyfills.map',
                     sourceMapRoot: '/'
                 },
                 //array of paths to polyfill js files you are using
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 
             ext: {
                 options: {
-                    sourceMap: 'js/ext-source-map.js',
+                    sourceMap: 'ext.map',
                     sourceMapRoot: '/'
                 },
                 //array of paths to extension (i.e. plugins) js files you are using
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
             app: {
                 options: {
-                    sourceMap: 'js/app-source-map.js',
+                    sourceMap: 'app.map',
                     sourceMapRoot: '/'
                 },
                 src: [
@@ -56,6 +56,45 @@ module.exports = function(grunt) {
         },
 
         /* you shouldn't need to edit below here */
+        copy: {
+            app: {
+                files: [
+                    {
+                        expand: false,
+                        src: ['lib.map'],
+                        dest: 'js/lib.map',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: false,
+                        src: ['polyfills.map'],
+                        dest: 'js/polyfills.map',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: false,
+                        src: ['ext.map'],
+                        dest: 'js/ext.map',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: false,
+                        src: ['app.map'],
+                        dest: 'js/app.map',
+                        filter: 'isFile'
+                    }
+                ]
+            }
+        },
+
+
+        clean: {
+            src: [
+                '*.map'
+            ]
+        },
+
+
         jshint: {
             all: [
                 'Gruntfile.js',
@@ -68,7 +107,9 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     sassDir: 'css/scss',
-                    cssDir: 'css'
+                    cssDir: 'css',
+                    debugInfo: true,
+                    noLineComments: true
                 }
             },
             dist: {
@@ -79,6 +120,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
 
         watch: {
             jsComponentsExt: {
@@ -116,9 +158,17 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'uglify', 'compass:dev']);
+    grunt.registerTask('default', [
+        'jshint',
+        'uglify',
+        'copy',
+        'clean',
+        'compass:dev'
+    ]);
 
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
