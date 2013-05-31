@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                 },
                 //array of paths to library js files you are using
                 src: [
-                    'components/lib/jquery/jquery-1.9.1.js'
+                    'components/lib/jquery/jquery-1.10.1.js'
                 ],
                 dest: 'js/lib.js'
             },
@@ -25,8 +25,9 @@ module.exports = function(grunt) {
                 //array of paths to polyfill js files you are using
                 src: [
                     'components/polyfills/console.log.js',
-                    'components/polyfills/es5-shim.js'
-                    //'components/polyfills/jquery.cssHooks.backgroundPosition.js'
+                    'components/polyfills/es5-shim.js',
+                    //'components/polyfills/jquery.cssHooks.backgroundPosition.js',
+                    'jquery.requestAnimationFrame.js'
                 ],
                 dest: 'js/polyfills.js'
             },
