@@ -6,7 +6,9 @@ module.exports = {
             sourceMap: true,
         },
         src: [
-            'components/jquery/jquery.js'
+            'components/jquery/jquery.js',
+            'components/underscore/underscore.js',
+            'components/backbone/backbone.js'
         ],
         dest: 'js/lib.js'
     },
@@ -42,7 +44,9 @@ module.exports = {
             sourceMap: true,
         },
         src: [
-            'js/app/*.js'
+            'js/app/app.js',
+            'js/app/*.js',
+            'js/app/**/*.js'
         ],
         dest: 'js/app.js'
     }
