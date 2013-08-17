@@ -74,7 +74,7 @@ module.exports = function(grunt) {
         concat: {
             cssLib: {
                 src: [
-                    'components/lib/normalize/normalize.css',
+                    'components/lib/normalize/normalize-1.1.2.css',
                     'components/lib/h5bp/main.css'
                 ],
                 dest: 'css/lib.css'
