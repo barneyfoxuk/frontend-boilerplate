@@ -30,28 +30,20 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('js:lib', [
-        'uglify:lib',
-        'copy:jsLib',
-        'clean:jsLib'
+        'uglify:lib'
     ]);
 
     grunt.registerTask('js:ext', [
-        'uglify:ext',
-        'copy:jsExt',
-        'clean:jsExt'
+        'uglify:ext'
     ]);
 
     grunt.registerTask('js:polyfills', [
-        'uglify:polyfills',
-        'copy:jsPolyfills',
-        'clean:jsPolyfills'
+        'uglify:polyfills'
     ]);
 
     grunt.registerTask('js:app', [
         'jshint:app',
-        'uglify:app',
-        'copy:jsApp',
-        'clean:jsApp'
+        'uglify:app'
     ]);
 
 

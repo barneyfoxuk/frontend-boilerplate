@@ -3,8 +3,7 @@ module.exports = {
     // Libraries (jQuery, Zepto, etc.)
     lib: {
         options: {
-            sourceMap: 'lib.map',
-            sourceMapRoot: '/'
+            sourceMap: true,
         },
         src: [
             'components/jquery/jquery.js'
@@ -16,11 +15,10 @@ module.exports = {
     // Extensions (Backbone Marionette, jQuery Mobile)
     ext: {
         options: {
-            sourceMap: 'ext.map',
-            sourceMapRoot: '/'
+            sourceMap: true,
         },
         src: [
-
+            'components/jquery.cookie/jquery.cookie.js'
         ],
         dest: 'js/ext.js'
     },
@@ -29,8 +27,7 @@ module.exports = {
     // Polyfills (Console, ES5, ES6, etc.)
     polyfills: {
         options: {
-            sourceMap: 'polyfills.map',
-            sourceMapRoot: '/'
+            sourceMap: true,
         },
         src: [
             'components/es5-shim/es5-sham.js',
@@ -42,8 +39,7 @@ module.exports = {
     // Application (Views, Models, Routers, etc.)
     app: {
         options: {
-            sourceMap: 'app.map',
-            sourceMapRoot: '/'
+            sourceMap: true,
         },
         src: [
             'js/app/*.js'

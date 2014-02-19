@@ -4,7 +4,7 @@ module.exports = {
         options: {
             sassDir: 'css/scss',
             cssDir: 'css',
-            debugInfo: true,
+            debugInfo: false,
             noLineComments: true
         }
     },
