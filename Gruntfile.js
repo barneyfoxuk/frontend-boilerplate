@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('css:lib', [
-        'concat:cssLib'
+        'cssmin:cssLib'
     ]);
 
 
