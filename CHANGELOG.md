@@ -8,6 +8,7 @@
   - Added load-grunt-tasks to automatically load grunt plugins
   - Separated each grunt plugin configuration out into own file
   - Updated CSS directory structure to align with SMACSS
+  - Removed copy / clean as grunt-contrib-uglify now generates source maps correctly
 
 
 ## 1.2.1 (February 18, 2014)
