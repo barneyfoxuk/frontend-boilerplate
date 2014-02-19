@@ -1,41 +1,15 @@
 // Watch files for changes
 module.exports = {
     // Libraries (jQuery, Zepto, etc.)
-    jsLib: {
+    jsComponents: {
         files: [
-            'components/lib/*.js',
-            'components/lib/**/*.js'
+            'components/*.js',
+            'components/**/*.js'
         ],
         tasks: [
-            'uglify:lib',
-            'copy:lib',
-            'clean:lib'
-        ]
-    },
-
-    // Extensions (Backbone Marionette, jQuery Mobile)
-    jsExt: {
-        files: [
-            'components/ext/*.js',
-            'components/ext/**/*.js'
-        ],
-        tasks: [
-            'uglify:ext',
-            'copy:ext',
-            'clean:ext'
-        ]
-    },
-
-    // Polyfills (Console, ES5, ES6, etc.)
-    jsPolyfills: {
-        files: [
-            'components/polyfills/*.js',
-            'components/polyfills/**/*.js'
-        ],
-        tasks: [
-            'uglify:polyfills',
-            'copy:polyfills',
-            'clean:polyfills'
+            'js:lib',
+            'js:ext',
+            'js:polyfills'
         ]
     },
 
@@ -43,39 +17,37 @@ module.exports = {
     // Application (Views, Models, Routers, etc.)
     jsApp: {
         files: [
+            'js/app/*.js',
             'js/app/**/*.js'
         ],
         tasks: [
-            'jshint',
-            'uglify:app',
-            'copy:app',
-            'clean:app'
+            'js:app',
         ]
     },
 
 
     // CSS Files
-    cssLib: {
+    cssComponents: {
         files: [
-            'components/lib/*.css',
-            'components/lib/**/*.css',
-            'components/lib/**/**/*.css',
-
-            'components/ext/*.css',
-            'components/ext/**/*.css',
-            'components/ext/**/**/*.css'
+            'components/*.{css,scss,sass,less}',
+            'components/**/*.{css,scss,sass,less}',
         ],
-        tasks: ['concat:cssLib'],
+        tasks: [
+            'css:lib'
+        ],
         options: {
-            livereload: true
+            livereload: false
         }
     },
 
 
     // Compass files
     cssApp: {
-        files: ['css/**/*.scss'],
-        tasks: ['compass:dev'],
+        files: [
+            'css/scss/*.{scss,sass}',
+            'css/scss/**/*.{scss,sass}'
+        ],
+        tasks: ['css:app'],
         options: {
             nospawn: true,
             livereload: true
@@ -87,8 +59,10 @@ module.exports = {
     imageApp: {
         files: [
             'img/*.png',
-            'img/*.jpg',
-            'img/*.jpeg'
+            'img/**/*.png',
+
+            'img/*.{jpg,jpeg}',
+            'img/**/*.{jpg,jpeg}',
         ],
         tasks: [
             'imagemin:all'

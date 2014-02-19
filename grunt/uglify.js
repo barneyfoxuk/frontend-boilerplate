@@ -1,4 +1,4 @@
-// Minify JavaScript files
+// Minify JS files
 module.exports = {
     // Libraries (jQuery, Zepto, etc.)
     lib: {
