@@ -1,3 +1,6 @@
+Change Log
+=============
+
 ## 1.3.0 (February 19, 2014)
 
   - Added bower support
