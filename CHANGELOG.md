@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.3.1 (March 12, 2014)
+
+  - Added comments to blank style.scss file for different folder includes
+
 ## 1.3.0 (February 19, 2014)
 
   - Added bower support
