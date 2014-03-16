@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.3.2 (March 16, 2014)
+
+  - Removed components directory to ensure always latest dependency via bower install
+
 ## 1.3.1 (March 12, 2014)
 
   - Added comments to blank style.scss file for different folder includes
