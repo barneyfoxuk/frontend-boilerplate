@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.3.3 (March 19, 2014)
+
+  - Commented out the rewrite rule to redirect to URL without www in .htaccess
+
 ## 1.3.2 (March 16, 2014)
 
   - Removed components directory to ensure always latest dependency via bower install
