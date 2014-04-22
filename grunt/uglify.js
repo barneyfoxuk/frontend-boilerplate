@@ -18,7 +18,7 @@ module.exports = {
             sourceMap: true,
         },
         src: [
-            'components/jquery.cookie/jquery.cookie.js'
+            'components/jquery-cookie/jquery.cookie.js'
         ],
         dest: 'js/ext.js'
     },

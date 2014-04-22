@@ -1,6 +1,12 @@
 Change Log
 =============
 
+## 1.3.4 (April 22, 2014)
+
+  - Updated bower and npm dependencies
+  - Removed foundation from default bower dependencies
+  - Added peer dependencies placeholder
+
 ## 1.3.3 (March 19, 2014)
 
   - Commented out the rewrite rule to redirect to URL without www in .htaccess
