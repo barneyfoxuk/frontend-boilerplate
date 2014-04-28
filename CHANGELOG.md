@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.3.5 (April 28, 2014)
+
+  - Watch grunt file for changes
+
 ## 1.3.4 (April 22, 2014)
 
   - Updated bower and npm dependencies
