@@ -67,5 +67,18 @@ module.exports = {
         tasks: [
             'imagemin:all'
         ]
+    },
+
+
+    config: {
+        files: [
+            'grunt/*.js'
+        ],
+        options: {
+            reload: true
+        },
+        tasks: [
+            'default'
+        ]
     }
 };
