@@ -1,6 +1,16 @@
 Change Log
 =============
 
+
+## 1.3.6 (May 8, 2014)
+
+  - Use safer version indicator ^ vs ~
+  - Specify engine version
+  - Updated node dependencies
+  - Updated bower dependencies
+  - Added picturefill to bower
+  - Removed jquery mobile from bower
+
 ## 1.3.5 (April 28, 2014)
 
   - Watch grunt file for changes
