@@ -1,22 +1,23 @@
 var App =  App || {};
 
-App.Misc = (function () {
-
+App.Misc = (function() {
     var privateMethod = function() {
         //do something private
     };
 
     var publicMethod = function() {
         //do something publicly accessable
+        privateMethod();
     };
+
 
     var init = function() {
         //initiate the module
     };
 
+
     return {
-        init:init,
+        init: init,
         publicMethod: publicMethod
     };
-
 }());

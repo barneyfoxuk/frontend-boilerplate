@@ -1,10 +1,16 @@
 // JSHint JS files
 module.exports = {
-    app: [
-        'js/app/*.js'
-    ],
-    grunt: [
-        'Gruntfile.js',
-        'grunt/*.js'
-    ]
+    app: {
+        options: {
+            jshintrc: '.jshintrc'
+        },
+        src: 'js/app/*.js'
+    },
+
+    grunt: {
+        src: [
+            'grunt/*.js',
+            'Gruntfile.js'
+        ]
+    }
 };

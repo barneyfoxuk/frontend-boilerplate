@@ -1,0 +1,25 @@
+{
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "freeze": true,
+    "immed": true,
+    "indent": 2,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "quotmark": true,
+    "undef": true,
+    "unused": true,
+    "trailing": true,
+
+    "eqnull": true,
+    "debug": true,
+    "browser": true,
+    "jquery": true,
+    "devel": true,
+
+    "globals": {}
+}

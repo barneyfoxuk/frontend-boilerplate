@@ -1,6 +1,12 @@
 Change Log
 =============
 
+## 1.3.7 (May 12, 2014)
+
+  - Use .jshintrc file
+  - Fixed linting errors
+  - Formatted code more consistently
+
 
 ## 1.3.6 (May 8, 2014)
 
