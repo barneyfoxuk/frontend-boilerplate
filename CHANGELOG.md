@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.3.9 (May 21, 2014)
+
+  - Added some globals, changed spacing to 4
+
 ## 1.3.8 (May 21, 2014)
 
   - Updated grunt-contrib-compass

@@ -4,7 +4,7 @@
     "eqeqeq": true,
     "freeze": true,
     "immed": true,
-    "indent": 2,
+    "indent": 4,
     "latedef": true,
     "newcap": true,
     "noarg": true,
@@ -21,5 +21,9 @@
     "jquery": true,
     "devel": true,
 
-    "globals": {}
+    "globals": {
+        "_": true,
+        "Backbone": true,
+        "Marionette": true
+    }
 }
