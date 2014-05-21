@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.3.8 (May 21, 2014)
+
+  - Updated grunt-contrib-compass
+
 ## 1.3.7 (May 12, 2014)
 
   - Use .jshintrc file
