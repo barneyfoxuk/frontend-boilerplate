@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.3.10 (May 23, 2014)
+
+  - Add ES3 mode in .jshintrc
+
 ## 1.3.9 (May 21, 2014)
 
   - Added some globals, changed spacing to 4
