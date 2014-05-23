@@ -18,6 +18,7 @@
     "eqnull": true,
     "debug": true,
     "browser": true,
+    "es3": true,
     "jquery": true,
     "devel": true,
 
