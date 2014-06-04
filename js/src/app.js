@@ -6,8 +6,14 @@ var Application = _.extend({
 }, Backbone.Events);
 
 
-
+// Custom initializer
 Application.on('initialize', function() {
+    new Application.Router.Default();
+});
+
+
+
+Application.on('initialize:after', function() {
     // Start history tracking
     Backbone.history.start({
         root: '/',
@@ -17,13 +23,9 @@ Application.on('initialize', function() {
 });
 
 
-// Custom initializer
-Application.on('initialize', function() {
-    // console.log('configure');
-});
-
-
 
 $(function(){
+    Application.trigger('initialize:before');
     Application.trigger('initialize');
+    Application.trigger('initialize:after');
 });
