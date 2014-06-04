@@ -17,8 +17,8 @@ module.exports = {
     // Application (Views, Models, Routers, etc.)
     jsApp: {
         files: [
-            'js/app/*.js',
-            'js/app/**/*.js'
+            'js/src/*.js',
+            'js/src/**/*.js'
         ],
         tasks: [
             'js:app',

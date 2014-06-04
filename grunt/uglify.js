@@ -6,7 +6,7 @@ module.exports = {
             sourceMap: true,
         },
         src: [
-            'components/jquery/jquery.js',
+            'components/jquery/dist/jquery.js',
             'components/underscore/underscore.js',
             'components/backbone/backbone.js'
         ],
