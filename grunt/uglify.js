@@ -10,7 +10,7 @@ module.exports = {
             'components/underscore/underscore.js',
             'components/backbone/backbone.js'
         ],
-        dest: 'js/lib.js'
+        dest: 'js/dist/lib.js'
     },
 
 
@@ -19,10 +19,8 @@ module.exports = {
         options: {
             sourceMap: true,
         },
-        src: [
-            'components/jquery-cookie/jquery.cookie.js'
-        ],
-        dest: 'js/ext.js'
+        src: [],
+        dest: 'js/dist/ext.js'
     },
 
 
@@ -32,9 +30,11 @@ module.exports = {
             sourceMap: true,
         },
         src: [
-            'components/es5-shim/es5-sham.js',
+            'components/console-polyfill/index.js',
+            'components/picturefill/src/picturefill.js',
+            'components/json3/lib/json3.js',
         ],
-        dest: 'js/polyfills.js'
+        dest: 'js/dist/polyfills.js'
     },
 
 
@@ -44,10 +44,10 @@ module.exports = {
             sourceMap: true,
         },
         src: [
-            'js/app/app.js',
-            'js/app/*.js',
-            'js/app/**/*.js'
+            'js/src/app.js',
+            'js/src/*.js',
+            'js/src/**/*.js'
         ],
-        dest: 'js/app.js'
+        dest: 'js/dist/app.js'
     }
 };

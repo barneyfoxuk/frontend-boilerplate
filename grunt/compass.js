@@ -8,6 +8,7 @@ module.exports = {
             noLineComments: true
         }
     },
+
     cssAppDist: {
         options: {
             sassDir: 'css/scss',
