@@ -2,7 +2,7 @@
     "name": "frontend-boilerplate",
     "description": "Karmarama Front-end Boilerplate",
 
-    "version": "1.3.10",
+    "version": "1.4.0",
 
     "authors": [
         "Barney Fox <barney@karmarama.com",
@@ -13,10 +13,10 @@
 
 
     "main": [
-        "js/lib.js",
-        "js/ext.js",
-        "js/polyfill.js",
-        "js/app.js",
+        "js/dist/lib.js",
+        "js/dist/ext.js",
+        "js/dist/polyfill.js",
+        "js/dist/app.js",
 
         "css/lib.css",
         "css/style.css"

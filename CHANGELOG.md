@@ -1,6 +1,11 @@
 Change Log
 =============
 
+## 1.4.0
+
+  - Use backbone by default
+  - Use two separate directories for source files and build files
+
 ## 1.3.10 (May 23, 2014)
 
   - Add ES3 mode in .jshintrc
