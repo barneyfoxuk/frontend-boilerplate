@@ -24,6 +24,7 @@
 
     "globals": {
         "_": true,
+        "Application": true,
         "Backbone": true,
         "Marionette": true
     }

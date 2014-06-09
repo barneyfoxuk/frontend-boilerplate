@@ -8,7 +8,7 @@ var Application = _.extend({
 
 // Custom initializer
 Application.on('initialize', function() {
-    new Application.Router.Default();
+    Application.router = new Application.Router.Default();
 });
 
 

@@ -1,7 +1,11 @@
 Change Log
 =============
 
-## 1.4.0
+## 1.4.1 (July 9, 2014)
+
+  - Fixed linting not working
+
+## 1.4.0 (July 5, 2014)
 
   - Use backbone by default
   - Use two separate directories for source files and build files

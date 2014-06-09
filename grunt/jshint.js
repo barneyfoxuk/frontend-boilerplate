@@ -4,7 +4,10 @@ module.exports = {
         options: {
             jshintrc: '.jshintrc'
         },
-        src: 'js/app/*.js'
+        src: [
+            'js/src/*.js',
+            'js/src/**/*.js'
+        ]
     },
 
     grunt: {
@@ -14,3 +17,4 @@ module.exports = {
         ]
     }
 };
+

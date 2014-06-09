@@ -21,7 +21,7 @@ module.exports = {
             'js/src/**/*.js'
         ],
         tasks: [
-            'js:app',
+            'js:app'
         ]
     },
 
@@ -30,7 +30,7 @@ module.exports = {
     cssComponents: {
         files: [
             'components/*.{css,scss,sass,less}',
-            'components/**/*.{css,scss,sass,less}',
+            'components/**/*.{css,scss,sass,less}'
         ],
         tasks: [
             'css:lib'
@@ -62,7 +62,7 @@ module.exports = {
             'img/**/*.png',
 
             'img/*.{jpg,jpeg}',
-            'img/**/*.{jpg,jpeg}',
+            'img/**/*.{jpg,jpeg}'
         ],
         tasks: [
             'imagemin:all'

@@ -5,7 +5,7 @@ module.exports = {
         files: {
             'css/lib.css': [
                 'components/normalize.css/normalize.css',
-                'components/html5-boilerplate/css/main.css',
+                'components/html5-boilerplate/css/main.css'
             ]
         }
     }
