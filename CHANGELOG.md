@@ -1,11 +1,15 @@
 Change Log
 =============
 
-## 1.4.1 (July 9, 2014)
+## 1.4.2 (June 20, 2014)
+
+  - Added application global
+
+## 1.4.1 (June 9, 2014)
 
   - Fixed linting not working
 
-## 1.4.0 (July 5, 2014)
+## 1.4.0 (June 5, 2014)
 
   - Use backbone by default
   - Use two separate directories for source files and build files
