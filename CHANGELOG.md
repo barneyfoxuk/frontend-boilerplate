@@ -1,6 +1,12 @@
 Change Log
 =============
 
+## 1.4.3 (July 4, 2014)
+
+  - Added modernizr global
+  - Updated npm dependencies
+  - Updated bower dependencies
+
 ## 1.4.2 (June 20, 2014)
 
   - Added application global
