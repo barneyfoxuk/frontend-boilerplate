@@ -26,6 +26,7 @@
         "_": true,
         "Application": true,
         "Backbone": true,
-        "Marionette": true
+        "Marionette": true,
+        "Modernizr": true
     }
 }
