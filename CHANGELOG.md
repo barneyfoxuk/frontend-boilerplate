@@ -1,6 +1,11 @@
 Change Log
 =============
 
+## 1.4.4 (July 18, 2014)
+
+  - Removed compass dist
+
+
 ## 1.4.3 (July 4, 2014)
 
   - Added modernizr global
