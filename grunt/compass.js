@@ -5,15 +5,9 @@ module.exports = {
             sassDir: 'css/scss',
             cssDir: 'css',
             debugInfo: false,
-            noLineComments: true
-        }
-    },
-
-    cssAppDist: {
-        options: {
-            sassDir: 'css/scss',
-            cssDir: 'css',
-            environment: 'production'
+            noLineComments: true,
+            environment: 'production',
+            outputStyle: 'compressed'
         }
     }
 };
