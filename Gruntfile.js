@@ -54,9 +54,6 @@ module.exports = function(grunt) {
 
 
 
-    // Load configuration
+    // Load configuration and tasks
     require('load-grunt-config')(grunt);
-
-    // Load tasks
-    require('load-grunt-tasks')(grunt);
 };
