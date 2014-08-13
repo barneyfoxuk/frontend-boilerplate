@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.4.6 (August 13, 2014)
+
+  - Updated npm dependencies
+
 ## 1.4.5 (August 13, 2014)
 
   - Added npm-debug.log to ignore file
