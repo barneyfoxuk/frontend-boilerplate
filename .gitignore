@@ -14,5 +14,7 @@
 
 .~lock.*
 
-nbproject
-node_modules
+nbproject/
+node_modules/
+
+npm-debug.log
