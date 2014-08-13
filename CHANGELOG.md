@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.4.7 (August 13, 2014)
+
+  - Fixed tags
+
 ## 1.4.6 (August 13, 2014)
 
   - Updated npm dependencies
