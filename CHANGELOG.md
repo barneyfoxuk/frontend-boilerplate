@@ -1,6 +1,10 @@
 Change Log
 =============
 
+## 1.4.5 (August 13, 2014)
+
+  - Added npm-debug.log to ignore file
+
 ## 1.4.4 (July 18, 2014)
 
   - Removed compass dist
