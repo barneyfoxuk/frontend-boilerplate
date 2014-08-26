@@ -1,0 +1,65 @@
+/*
+ * base
+ */
+
+div, p {
+    
+}
+
+
+h1 {
+    
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+h5 {
+    
+}
+
+h6 {
+    
+}
+
+
+/*
+ * Weight
+ */
+
+.font-normal {
+  font-weight: normal;
+}
+.font-thin {
+  font-weight: $font-thin;
+}
+.font-bold {
+  font-weight: $font-bold;
+}
+
+
+/*
+ * Size
+ */
+
+.text-lg {
+  font-size: $text-lg;
+}
+.text-md {
+  font-size: $text-md;
+}
+.text-sm {
+  font-size: $text-sm;
+}
+.text-xs {
+  font-size: $text-xs;
+}
