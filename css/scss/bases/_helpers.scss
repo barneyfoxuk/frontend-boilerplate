@@ -18,7 +18,7 @@
 
 
 /*
- * Side
+ * Alignment
  */
 
 .pull-left {
@@ -29,6 +29,12 @@
 }
 .pull-none {
   float: none;
+}
+.inline-center {
+  text-align: center;
+}
+.block-center {
+  margin: 0 auto;
 }
 
 
